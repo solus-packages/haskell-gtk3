@@ -1,0 +1,30 @@
+name       : haskell-gtk3
+version    : 0.14.6
+release    : 1
+source     :
+    - http://hackage.haskell.org/package/gtk3-0.14.6/gtk3-0.14.6.tar.gz : f4c0d3c51a5e06e5f6a8fcfc2a1303e0a3ed0242309fc6c1b9603be9de1f4258
+license    : LGPL-2.1
+component  : programming.haskell
+summary    : This is the core library of the Gtk2Hs suite of libraries for Haskell based on Gtk+.
+description: |
+    This is the core library of the Gtk2Hs suite of libraries for Haskell based on Gtk+. Gtk+ is an extensive and mature multi-platform toolkit for creating graphical user interfaces.
+builddeps  :
+    - pkgconfig(gtk+-3.0)
+    - ghc-devel
+    - gtk2hs-buildtools-devel
+    - haskell-cabal-install
+    - haskell-gio
+    - haskell-pango
+    - haskell-hashable-devel
+    - haskell-hashtables-devel
+    - haskell-primitive-devel
+    - haskell-random-devel
+    - haskell-text-devel
+    - haskell-vector-devel
+setup      : |
+    %cabal_configure
+build      : |
+    %cabal_build
+install    : |
+    %cabal_install
+    %cabal_register
